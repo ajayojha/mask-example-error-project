@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="userFormGroup">
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="text" formControlName="phoneNumber" class="form-control"  />
+     
+     {{userFormGroup.controls.phoneNumber.errors | json}}
+    </div>
+    <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>
